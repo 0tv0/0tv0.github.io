@@ -1,0 +1,300 @@
+:root {
+  --rainbow-hue-saturation: 100%;
+  --rainbow-hue-luminance: 50%;
+}
+
+@keyframes rainbow {
+    0% { background-color: hsl(0,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+    10% { background-color: hsl(36,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+    20% { background-color: hsl(72,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+    30% { background-color: hsl(108,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+    40% { background-color: hsl(144,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+    50% { background-color: hsl(180,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+    60% { background-color: hsl(216,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+    70% { background-color: hsl(252,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+    80% { background-color: hsl(288,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+    90% { background-color: hsl(324,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+    100% { background-color: hsl(359,var(--rainbow-hue-saturation),var(--rainbow-hue-luminance)); }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-500%)
+  }
+  
+  100% {
+    transform: translateX(0%)
+  }
+}
+
+@keyframes bye {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes deloadMenu {
+  0% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  
+  0.1% {
+    opacity: 1;
+  }
+}
+
+@keyframes noteInfoCool {
+  0% {
+    opacity: 1;
+  }
+  
+  60% {
+    transform: translateY(-2rem);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1000s;
+}
+
+.noteInfoCool {
+  position: absolute;
+  left: 20vw;
+  top: 25vh;
+  width: 150px;
+  height: auto;
+  image-rendering: pixelated;
+  animation: noteInfoCool 1s;
+}
+
+html, body {
+  position: fixed;
+  margin: 0px;
+  
+  animation-timing-function: linear;
+  animation: rainbow 10s infinite;
+}
+
+#mainMenu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  line-height: 80%;
+}
+
+#mainMenu * {
+  transition-duration: 0.2s;
+}
+
+#mainMenu h1 {
+  height: 4rem;
+  font-size: 4rem;
+}
+
+#mainMenu h2 {
+  height: 3rem;
+  font-size: 3rem;
+}
+
+#mainMenu h3 {
+  height: 2rem;
+  font-size: 2rem;
+}
+
+#mainMenu h4 {
+  height: 1rem;
+  font-size: 1rem;
+  line-height: 130%;
+}
+
+#mainMenu h1, #mainMenu h2, #mainMenu h3, #mainMenu h4 {
+  font-family: Century Gothic, Segoe UI, Helvetica Neue;
+  color: white;
+  font-weight: 400;
+  width: 100vw;
+  text-align: center;
+}
+
+#bottomTextDiv {
+  position: absolute;
+  width: 100vw;
+  bottom: 25px;
+  height: 3rem;
+}
+
+#stats {
+  position: absolute;
+  width: 100vw;
+  top: calc(100vh - 4rem);
+  text-align: center;
+  font-family: Century Gothic, Segoe UI, Helvetica Neue;
+  font-size: 1rem;
+  color: white;
+}
+
+#bottomText {
+  width: 100vw;
+  text-align: center;
+  font-family: Century Gothic, Segoe UI, Helvetica Neue;
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+}
+
+button {
+  font-family: Century Gothic, Segoe UI, Helvetica Neue;
+  font-weight: 300;
+  font-size: 2rem;
+  color: white;
+  border: 1px solid transparent;
+  height: 4rem;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.5rem;
+  width: 40vw;
+  margin-top: 20px;
+  margin-bottom: -15px;
+  background-color: rgb(35,36,38);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.43);
+}
+
+button:hover {
+    background-color: rgb(60,62,67);
+}
+
+button:disabled {
+  color: grey;
+}
+
+#title {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+  font-family: Century Gothic, Segoe UI, Helvetica Neue;
+  font-weight: 200;
+}
+
+#background, #game {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+#background {
+  line-height: 80%;
+  filter: blur(2px);
+  opacity: 0.5;
+}
+
+#bgImg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+#cc {
+  position: absolute;
+  bottom: 15px;
+  right: 5px;
+  image-rendering: pixelated;
+}
+
+#loadingScreen {
+  position: absolute;
+  left: 0px;
+  top: -100vh;
+  width: 100vw;
+  height: 100vh;
+}
+
+#loadingMessage {
+  margin: 0;
+  position: absolute;
+  top: 150%;
+  transform: translate(0%, -50%);
+  width: 100vw;
+  text-align: center;
+  
+  font-family: Century Gothic, Segoe UI, Helvetica Neue;
+  font-weight: 300;
+  font-size: 2rem;
+  color: white;
+}
+
+.spawning {
+  animation: slideIn 2s !important;
+}
+
+.despawning {
+  animation: bye 1.8s !important;
+}
+
+.menuDespawn {
+  animation: deloadMenu 1s;
+}
+
+#console {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  font-size: 0.75rem;
+  font-family: Menlo-regular, Consolas;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+#errorReporting {
+  pointer-events: none;
+}
+
+.errorReporting {
+  border-radius: 7px;
+  background: linear-gradient(90deg, rgba(255,0,0,1) 12px, rgba(49,49,55,1) 12px);
+  padding: 4px;
+  padding-left: 17px;
+  margin: 4px;
+  font-family: Century Gothic, Segoe UI, Helvetica Neue;
+  font-size: 1.25rem;
+  color: white;
+}
+
+#winScreen span {
+  position: fixed;
+  font-family: Century Gothic, Segoe UI, Helvetica Neue;
+  color: white;
+  width: 100vw;
+  text-align: center;
+}
