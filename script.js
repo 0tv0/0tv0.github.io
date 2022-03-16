@@ -482,7 +482,7 @@ game.songs.forEach(x => {
             let voices = new Audio();
             setTimeout(async () => {
               console.log("Downloaded voices");
-              msg.innerText = 'Loading files [2/3]\nFetching chart';
+              msg.innerText = 'Loading files [2/3]\nFetching chart\nChart location: ' + y.chart;
               await chartMGR.load(y.chart);
               msg.innerText = 'Loaded files [3/3] (Audio downloads skipped)\nTap on this message to begin!\n\nWarning: audio desyncs are VERY common\nBlame safari, not me';
 
