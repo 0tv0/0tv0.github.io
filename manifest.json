@@ -1,0 +1,12 @@
+{
+  "name": "AAAAAAAAAAAAA",
+  "short_name": "AAAAAAAAAAAAAA",
+  "version": "2.0",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "landscape",
+  "scope": "/",
+  "start_url": "/",
+  "manifest_version": 2
+}
