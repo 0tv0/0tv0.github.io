@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="apple-touch-icon" href="hello.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <img src="aurora.jpg" id="bgImg">
+    <canvas id="background"></canvas>
+    <canvas id="game"></canvas>
+    <div id="console" hidden="true">
+      
+    </div>
+    <div id="mainMenu">
+      <p id="title">Its almost FNF</p>
+      <hr size="1" width="50%" color="white">  
+      <br>
+      <div id="bottomTextDiv">
+        <p id="bottomText">
+          Author: Uhh online friends know about this site, so not saying my IRL name, I got an A/A* (grade 8) in computer science
+          <br><br>
+          Online: <a href="https://glitch.com/@fishi1234567890">Glitch profile</a> |
+          <a href="javascript:alert('nah')">Discord account</a> |
+          <a href="https://www.youtube.com/channel/UC2ZBOiOJHVPptldb4dxdFyw">Youtube (No upload schedule, mainly videos of roblox's version of fnf)</a>
+        </p>
+      </div>
+      <img src="https://licensebuttons.net/l/by-sa/3.0/88x31.png" id="cc">
+    </div>
+    <div id="loadingScreen" hidden="true">
+      <p id="loadingMessage">
+        Please wait...
+      </p>
+    </div>
+
+    <p id="stats" hidden="true">
+      Waiting for first note
+    </p>
+    
+    <div id="errorReporting" style="position: absolute; width: 100vw; height: 100vh; top: 0px; left: 0px; pointer-events: none;"></div>
+    <div id="winScreen" style="position: absolute; width: 100vw; height: 100vh; top: 0px; left: 0px; pointer-events: none; background-color: #000000aa; opacity: 0;">
+      <br><br><br><br><br><br>
+      <span style="font-size: 4rem;">Song completed!</span>
+      <br><br><br><br><br>
+      <span style="font-size: 2rem;" id="endStats"></span>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <span style="font-size: 1rem;">Want to play again?: hold the cmd key and press R<br>Alternatively, open the app switcher and close the app</span>
+    </div>
+    
+  </body>
+</html>
